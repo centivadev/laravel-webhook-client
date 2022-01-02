@@ -55,7 +55,15 @@ class WebhookProcessor
 
             $webhookCall->clearException();
 
-            dispatch($job);
+            switch ($this->config->dispatchWebhookJob) {
+                case 'sync':
+                    dispatch_sync($job);
+                    break;
+
+                default:
+                    dispatch($job);
+                    break;
+            }
         } catch (Exception $exception) {
             $webhookCall->saveException($exception);
 

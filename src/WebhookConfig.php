@@ -29,6 +29,8 @@ class WebhookConfig
 
     public string $processWebhookJobClass;
 
+    public string $dispatchWebhookJob;
+
     public function __construct(array $properties)
     {
         $this->name = $properties['name'];
@@ -62,5 +64,7 @@ class WebhookConfig
         }
 
         $this->processWebhookJobClass = $properties['process_webhook_job'];
+
+        $this->dispatchWebhookJob = $properties['dispatch_webhook_job'];
     }
 }

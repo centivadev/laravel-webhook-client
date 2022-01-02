@@ -59,6 +59,11 @@ return [
              * This should be set to a class that extends \Spatie\WebhookClient\ProcessWebhookJob.
              */
             'process_webhook_job' => '',
+
+            /*
+             * Dispatch job mode
+             */
+            'dispatch_webhook_job' => '',
         ],
     ],
 ];
