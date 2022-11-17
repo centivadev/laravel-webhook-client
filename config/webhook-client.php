@@ -44,7 +44,7 @@ return [
             'webhook_model' => \Spatie\WebhookClient\Models\WebhookCall::class,
 
             /*
-             * In this array, you can pass the headers that should be store on
+             * In this array, you can pass the headers that should be stored on
              * the webhook call model when a webhook comes in.
              *
              * To store all headers, set this value to `*`.
@@ -56,7 +56,7 @@ return [
             /*
              * The class name of the job that will process the webhook request.
              *
-             * This should be set to a class that extends \Spatie\WebhookClient\ProcessWebhookJob.
+             * This should be set to a class that extends \Spatie\WebhookClient\Jobs\ProcessWebhookJob.
              */
             'process_webhook_job' => '',
 
